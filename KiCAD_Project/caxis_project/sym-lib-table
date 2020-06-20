@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name lib_sch)(type Legacy)(uri ${KIPRJMOD}/lib_sch.lib)(options "")(descr ""))
+  (lib (name arduino)(type Legacy)(uri C:/Users/jleeman/Downloads/arduino.lib)(options "")(descr ""))
+)
