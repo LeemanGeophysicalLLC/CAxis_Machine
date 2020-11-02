@@ -36,7 +36,7 @@ char motors_enabled = 0;
 void recordMovement(uint8_t, int16_t);
 void cmdDisableMotors(int, char);
 void cmdEnableMotors(int, char);
-int16_t degreesToSteps(int16_t);
+int32_t degreesToSteps(int16_t);
 void cmdMoveAxis(int, char);
 int16_t fastestWayToAngle(int16_t, int16_t);
 void cmdMoveHome(int, char);

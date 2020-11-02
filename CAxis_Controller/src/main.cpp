@@ -9,7 +9,7 @@
  * Axis 0 - Polarizer 1
  * Axis 1 - Polarizer 2
  * Axis 2 - Sample
- * Axis ` - Stage (oblique tilt)
+ * Axis 3 - Stage (oblique tilt)
  * 
  * The sketch will disable all motors when it starts to help keep motors from needlessly
  * heating up. Each time the Arduino power is cycled (computer cycled, etc) the state will
@@ -94,13 +94,14 @@ void cmdEnableMotors(int arg_cnt, char **args)
 }
 
 
-int16_t degreesToSteps(int16_t degrees)
+int32_t degreesToSteps(int16_t degrees)
 {
   /*
    * Calculate the number of steps needed to move some number of degrees. Works with signed
    * values.
    */
-  return degrees * 10 * STEPS_PER_TENTH_DEGREE;
+  int32_t steps = degrees * int32_t(10) * STEPS_PER_TENTH_DEGREE;
+  return steps;
 }
 
 
@@ -128,7 +129,7 @@ void cmdJogAxis(int arg_cnt, char **args)
   }
 
   uint8_t axis_index = cmdStr2Num(args[1], 10);
-  uint16_t move_steps = cmdStr2Num(args[2], 10);
+  int32_t move_steps = cmdStr2Num(args[2], 10);
 
   if ((axis_index < 0) || (axis_index > 3))
   {
@@ -197,6 +198,10 @@ int16_t fastestWayToAngle(int16_t current, int16_t target)
   if (delta > 180)
   {
     return -360 + delta;
+  }
+  else if (delta < -180)
+  {
+    return 360 + delta;
   }
   return delta;
 }
