@@ -116,6 +116,12 @@
 				<Item Name="SampleCalibrationRemovePlate.vi" Type="VI" URL="../SampleCalibrationRemovePlate.vi"/>
 				<Item Name="TestDoSampleCalibration.vi" Type="VI" URL="../TestDoSampleCalibration.vi"/>
 				<Item Name="TakeSampleCalibrationImages.vi" Type="VI" URL="../TakeSampleCalibrationImages.vi"/>
+				<Item Name="create_sample_calibration_rois.vi" Type="VI" URL="../create_sample_calibration_rois.vi"/>
+				<Item Name="sample_calibration_find_roi_centroids.vi" Type="VI" URL="../sample_calibration_find_roi_centroids.vi"/>
+				<Item Name="sample_calibration_sort_centroids.vi" Type="VI" URL="../sample_calibration_sort_centroids.vi"/>
+				<Item Name="sample_calibration_process_centroids.vi" Type="VI" URL="../sample_calibration_process_centroids.vi"/>
+				<Item Name="find_roi_centroid.vi" Type="VI" URL="../find_roi_centroid.vi"/>
+				<Item Name="test_calculations.vi" Type="VI" URL="../../../../Documents/LabVIEW Data/10-30-2020/test_calculations.vi"/>
 			</Item>
 			<Item Name="Scale Calibration" Type="Folder">
 				<Item Name="FindScaleCalibration.vi" Type="VI" URL="../../../../Desktop/Scientific_Camera_Interfaces/Scientific Camera Interfaces/LabVIEW/32_bit/FindScaleCalibration.vi"/>
@@ -267,6 +273,7 @@
 			</Item>
 			<Item Name="Manual Jog" Type="Folder">
 				<Item Name="DoManualJog.vi" Type="VI" URL="../DoManualJog.vi"/>
+				<Item Name="TestManualJog.vi" Type="VI" URL="../TestManualJog.vi"/>
 			</Item>
 			<Item Name="arange.vi" Type="VI" URL="../arange.vi"/>
 			<Item Name="GoUnloadAfterCalibration.vi" Type="VI" URL="../../../../Desktop/Scientific_Camera_Interfaces/Scientific Camera Interfaces/LabVIEW/32_bit/GoUnloadAfterCalibration.vi"/>
@@ -276,6 +283,8 @@
 			<Item Name="SplashScreen.vi" Type="VI" URL="../SplashScreen.vi"/>
 			<Item Name="SelectSerialPort.vi" Type="VI" URL="../SelectSerialPort.vi"/>
 			<Item Name="2D_Flip_UD.vi" Type="VI" URL="../2D_Flip_UD.vi"/>
+			<Item Name="roi_scratch_program.vi" Type="VI" URL="../roi_scratch_program.vi"/>
+			<Item Name="camera_multiple_image_test.vi" Type="VI" URL="../camera_multiple_image_test.vi"/>
 		</Item>
 		<Item Name="typedefs" Type="Folder">
 			<Item Name="AcquireSampleImages_states_enum_typedef.ctl" Type="VI" URL="../AcquireSampleImages_states_enum_typedef.ctl"/>
@@ -295,6 +304,7 @@
 		<Item Name="main_enum_states_typedef.ctl" Type="VI" URL="../main_enum_states_typedef.ctl"/>
 		<Item Name="DoManualJog_states_enum_typedef.ctl" Type="VI" URL="../DoManualJog_states_enum_typedef.ctl"/>
 		<Item Name="startup.vi" Type="VI" URL="../startup.vi"/>
+		<Item Name="centroid_difference_cluster_typedef.ctl" Type="VI" URL="../centroid_difference_cluster_typedef.ctl"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Application Directory.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Application Directory.vi"/>
@@ -384,9 +394,16 @@
 				<Item Name="ROI Descriptor" Type="VI" URL="/&lt;vilib&gt;/vision/Image Controls.llb/ROI Descriptor"/>
 				<Item Name="IMAQ Ungroup ROIs" Type="VI" URL="/&lt;vilib&gt;/vision/ROI Tools.llb/IMAQ Ungroup ROIs"/>
 				<Item Name="IMAQ Copy" Type="VI" URL="/&lt;vilib&gt;/vision/Management.llb/IMAQ Copy"/>
+				<Item Name="IMAQ Rectangle" Type="VI" URL="/&lt;vilib&gt;/vision/Image Controls.llb/IMAQ Rectangle"/>
+				<Item Name="Color to RGB.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/colorconv.llb/Color to RGB.vi"/>
+				<Item Name="IMAQ Overlay ROI" Type="VI" URL="/&lt;vilib&gt;/vision/Overlay.llb/IMAQ Overlay ROI"/>
+				<Item Name="IMAQ ConstructROI" Type="VI" URL="/&lt;vilib&gt;/vision/ROI Display.llb/IMAQ ConstructROI"/>
+				<Item Name="IMAQ Convert Rectangle to ROI" Type="VI" URL="/&lt;vilib&gt;/vision/ROI Conversion.llb/IMAQ Convert Rectangle to ROI"/>
+				<Item Name="Sort 2D Array - Push Stack.vi" Type="VI" URL="/&lt;vilib&gt;/Array/Sort 2D Array - Push Stack.vi"/>
+				<Item Name="Sort 2D Array - Pop Stack.vi" Type="VI" URL="/&lt;vilib&gt;/Array/Sort 2D Array - Pop Stack.vi"/>
+				<Item Name="Assert Block Data Type.vim" Type="VI" URL="/&lt;vilib&gt;/Utility/TypeAssert/Assert Block Data Type.vim"/>
+				<Item Name="Sort 2D Array.vim" Type="VI" URL="/&lt;vilib&gt;/Array/Sort 2D Array.vim"/>
 			</Item>
-			<Item Name="Color Balance.ctl" Type="VI" URL="../Controls/Color Balance.ctl"/>
-			<Item Name="Color Modes.ctl" Type="VI" URL="../Controls/Color Modes.ctl"/>
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
 			<Item Name="mscorlib" Type="VI" URL="mscorlib">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
@@ -397,8 +414,6 @@
 			<Item Name="nivissvc.dll" Type="Document" URL="nivissvc.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="Polarization Processing Type.ctl" Type="VI" URL="../Controls/Polarization Processing Type.ctl"/>
-			<Item Name="Region of Interest.ctl" Type="VI" URL="../Controls/Region of Interest.ctl"/>
 			<Item Name="Thorlabs.TSI.ColorInterfaces.dll" Type="Document" URL="../../../../../../code/ScientificCameraInterfaces/Installer/Scientific Camera Interfaces/LabVIEW/64_bit/Library_X64/Thorlabs.TSI.ColorInterfaces.dll"/>
 			<Item Name="Thorlabs.TSI.ColorProcessor.dll" Type="Document" URL="../../../../../../code/ScientificCameraInterfaces/Installer/Scientific Camera Interfaces/LabVIEW/64_bit/Library_X64/Thorlabs.TSI.ColorProcessor.dll"/>
 			<Item Name="Thorlabs.TSI.CoreInterfaces.dll" Type="Document" URL="../../../../../../code/ScientificCameraInterfaces/Installer/Scientific Camera Interfaces/LabVIEW/64_bit/Library_X64/Thorlabs.TSI.CoreInterfaces.dll"/>
@@ -407,9 +422,24 @@
 			<Item Name="Thorlabs.TSI.PolarizationInterfaces.dll" Type="Document" URL="../../../../../../code/ScientificCameraInterfaces/Installer/Scientific Camera Interfaces/LabVIEW/64_bit/Library_X64/Thorlabs.TSI.PolarizationInterfaces.dll"/>
 			<Item Name="Thorlabs.TSI.PolarizationProcessor.dll" Type="Document" URL="../../../../../../code/ScientificCameraInterfaces/Installer/Scientific Camera Interfaces/LabVIEW/64_bit/Library_X64/Thorlabs.TSI.PolarizationProcessor.dll"/>
 			<Item Name="Thorlabs.TSI.TLCameraInterfaces.dll" Type="Document" URL="../../../../../../code/ScientificCameraInterfaces/Installer/Scientific Camera Interfaces/LabVIEW/64_bit/Library_X64/Thorlabs.TSI.TLCameraInterfaces.dll"/>
-			<Item Name="Trigger Modes.ctl" Type="VI" URL="../Controls/Trigger Modes.ctl"/>
-			<Item Name="Trigger Polarity.ctl" Type="VI" URL="../Controls/Trigger Polarity.ctl"/>
-			<Item Name="Trigger Settings.ctl" Type="VI" URL="../Controls/Trigger Settings.ctl"/>
+			<Item Name="Thorlabs.TSI.TLCameraInterfaces" Type="Document" URL="Thorlabs.TSI.TLCameraInterfaces">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
+			<Item Name="Thorlabs.TSI.ImageDataInterfaces" Type="Document" URL="Thorlabs.TSI.ImageDataInterfaces">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
+			<Item Name="Thorlabs.TSI.ColorInterfaces" Type="Document" URL="Thorlabs.TSI.ColorInterfaces">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
+			<Item Name="Thorlabs.TSI.Demosaicker" Type="Document" URL="Thorlabs.TSI.Demosaicker">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
+			<Item Name="Thorlabs.TSI.ColorProcessor" Type="Document" URL="Thorlabs.TSI.ColorProcessor">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
+			<Item Name="Thorlabs.TSI.PolarizationInterfaces" Type="Document" URL="Thorlabs.TSI.PolarizationInterfaces">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
