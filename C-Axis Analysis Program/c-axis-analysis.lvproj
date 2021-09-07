@@ -16,10 +16,15 @@
 		</Item>
 		<Item Name="subvis" Type="Folder">
 			<Item Name="caxis minimization" Type="Folder">
-				<Item Name="calculate_r2_for_caxis.vi" Type="VI" URL="../calculate_r2_for_caxis.vi"/>
-				<Item Name="create_caxis_calculation_grid.vi" Type="VI" URL="../create_caxis_calculation_grid.vi"/>
+				<Item Name="calculate_r_squared.vi" Type="VI" URL="../calculate_r_squared.vi"/>
+				<Item Name="caxis_best_fit_for_trials.vi" Type="VI" URL="../caxis_best_fit_for_trials.vi"/>
+				<Item Name="caxis_fine_fit.vi" Type="VI" URL="../caxis_fine_fit.vi"/>
+				<Item Name="caxis_rough_fit.vi" Type="VI" URL="../caxis_rough_fit.vi"/>
+				<Item Name="create_caxis_fine_sweep.vi" Type="VI" URL="../create_caxis_fine_sweep.vi"/>
+				<Item Name="create_caxis_rough_calculation_grid.vi" Type="VI" URL="../create_caxis_rough_calculation_grid.vi"/>
 				<Item Name="fit_c_axis.vi" Type="VI" URL="../fit_c_axis.vi"/>
 				<Item Name="refraction_polarization_correction.vi" Type="VI" URL="../refraction_polarization_correction.vi"/>
+				<Item Name="time_to_stop_optimization.vi" Type="VI" URL="../time_to_stop_optimization.vi"/>
 			</Item>
 			<Item Name="Determine c Parameter" Type="Folder">
 				<Item Name="do_determine_c_parameter.vi" Type="VI" URL="../do_determine_c_parameter.vi"/>
@@ -39,6 +44,7 @@
 			<Item Name="files" Type="Folder">
 				<Item Name="filter_images_by_phi.vi" Type="VI" URL="../filter_images_by_phi.vi"/>
 				<Item Name="filter_images_by_xi.vi" Type="VI" URL="../filter_images_by_xi.vi"/>
+				<Item Name="get_image_sequences.vi" Type="VI" URL="../get_image_sequences.vi"/>
 				<Item Name="get_images_for_sample.vi" Type="VI" URL="../get_images_for_sample.vi"/>
 				<Item Name="get_samples_in_directory.vi" Type="VI" URL="../get_samples_in_directory.vi"/>
 				<Item Name="parse_details_from_image_name.vi" Type="VI" URL="../parse_details_from_image_name.vi"/>
@@ -67,9 +73,12 @@
 			<Item Name="section_analysis" Type="Folder">
 				<Item Name="choose_crystals.vi" Type="VI" URL="../choose_crystals.vi"/>
 				<Item Name="create_grid.vi" Type="VI" URL="../create_grid.vi"/>
+				<Item Name="do_caxis_fit.vi" Type="VI" URL="../do_caxis_fit.vi"/>
 				<Item Name="do_section_analysis.vi" Type="VI" URL="../do_section_analysis.vi"/>
 				<Item Name="draw_circle_on_section.vi" Type="VI" URL="../draw_circle_on_section.vi"/>
 				<Item Name="get_all_intensity.vi" Type="VI" URL="../get_all_intensity.vi"/>
+				<Item Name="get_all_lm_fits.vi" Type="VI" URL="../get_all_lm_fits.vi"/>
+				<Item Name="get_all_refr_pol_corrections.vi" Type="VI" URL="../get_all_refr_pol_corrections.vi"/>
 				<Item Name="get_roi_intensity.vi" Type="VI" URL="../get_roi_intensity.vi"/>
 				<Item Name="get_rois.vi" Type="VI" URL="../get_rois.vi"/>
 				<Item Name="initial_guess.vi" Type="VI" URL="../initial_guess.vi"/>
@@ -98,6 +107,7 @@
 			<Item Name="select_sample_states_enum_typedef.ctl" Type="VI" URL="../select_sample_states_enum_typedef.ctl"/>
 			<Item Name="set_sample_parameters_states_enum_typedef.ctl" Type="VI" URL="../set_sample_parameters_states_enum_typedef.ctl"/>
 			<Item Name="setup_sections_states_enum_typedef.ctl" Type="VI" URL="../setup_sections_states_enum_typedef.ctl"/>
+			<Item Name="thetac_phic_enum_typedef.ctl" Type="VI" URL="../thetac_phic_enum_typedef.ctl"/>
 			<Item Name="tune_c_parameter_states_enum_typedef.ctl" Type="VI" URL="../tune_c_parameter_states_enum_typedef.ctl"/>
 			<Item Name="writeable_section_parameters_cluster_typedef.ctl" Type="VI" URL="../writeable_section_parameters_cluster_typedef.ctl"/>
 			<Item Name="xi_angles_enum_typedef.ctl" Type="VI" URL="../xi_angles_enum_typedef.ctl"/>
