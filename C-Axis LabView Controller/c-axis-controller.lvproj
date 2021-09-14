@@ -127,6 +127,7 @@
 				<Item Name="FindScaleCalibration.vi" Type="VI" URL="../../../../Desktop/Scientific_Camera_Interfaces/Scientific Camera Interfaces/LabVIEW/32_bit/FindScaleCalibration.vi"/>
 				<Item Name="TakeScaleCalibrationImage.vi" Type="VI" URL="../TakeScaleCalibrationImage.vi"/>
 				<Item Name="DoScaleCalibration.vi" Type="VI" URL="../DoScaleCalibration.vi"/>
+				<Item Name="test_scale_calculation.vi" Type="VI" URL="../test_scale_calculation.vi"/>
 			</Item>
 			<Item Name="Table Calibration" Type="Folder">
 				<Item Name="table_calibration_dialog.vi" Type="VI" URL="../table_calibration_dialog.vi"/>
@@ -299,6 +300,9 @@
 			<Item Name="SampleCalibrationCalculationResults_cluster_typedef.ctl" Type="VI" URL="../SampleCalibrationCalculationResults_cluster_typedef.ctl"/>
 			<Item Name="SampleCalibration_enum_states_typedef.ctl" Type="VI" URL="../SampleCalibration_enum_states_typedef.ctl"/>
 		</Item>
+		<Item Name="assets" Type="Folder">
+			<Item Name="controller_icon.ico" Type="Document" URL="../controller_icon.ico"/>
+		</Item>
 		<Item Name="MAIN.vi" Type="VI" URL="../MAIN.vi"/>
 		<Item Name="SelectSerialPort_states_enum_typedef.ctl" Type="VI" URL="../SelectSerialPort_states_enum_typedef.ctl"/>
 		<Item Name="main_enum_states_typedef.ctl" Type="VI" URL="../main_enum_states_typedef.ctl"/>
@@ -441,6 +445,160 @@
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
 		</Item>
-		<Item Name="Build Specifications" Type="Build"/>
+		<Item Name="Build Specifications" Type="Build">
+			<Item Name="C-Axis Controller" Type="EXE">
+				<Property Name="App_copyErrors" Type="Bool">true</Property>
+				<Property Name="App_INI_aliasGUID" Type="Str">{4452EA08-E657-4443-97EB-1A98638E0559}</Property>
+				<Property Name="App_INI_GUID" Type="Str">{4880989B-8F5E-471D-ABDA-41CA0A221652}</Property>
+				<Property Name="App_serverConfig.httpPort" Type="Int">8002</Property>
+				<Property Name="Bld_autoIncrement" Type="Bool">true</Property>
+				<Property Name="Bld_buildCacheID" Type="Str">{78D0061C-881A-4DB6-97FA-FAEA32794F25}</Property>
+				<Property Name="Bld_buildSpecName" Type="Str">C-Axis Controller</Property>
+				<Property Name="Bld_excludeInlineSubVIs" Type="Bool">true</Property>
+				<Property Name="Bld_excludeLibraryItems" Type="Bool">true</Property>
+				<Property Name="Bld_excludePolymorphicVIs" Type="Bool">true</Property>
+				<Property Name="Bld_localDestDir" Type="Path">../builds/NI_AB_PROJECTNAME/C-Axis Controller</Property>
+				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
+				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
+				<Property Name="Bld_previewCacheID" Type="Str">{CDB0299C-033C-4B7D-B152-B72994235F26}</Property>
+				<Property Name="Bld_version.build" Type="Int">3</Property>
+				<Property Name="Bld_version.major" Type="Int">1</Property>
+				<Property Name="Destination[0].destName" Type="Str">caxiscontroller.exe</Property>
+				<Property Name="Destination[0].path" Type="Path">../builds/NI_AB_PROJECTNAME/C-Axis Controller/caxiscontroller.exe</Property>
+				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
+				<Property Name="Destination[0].type" Type="Str">App</Property>
+				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
+				<Property Name="Destination[1].path" Type="Path">../builds/NI_AB_PROJECTNAME/C-Axis Controller/data</Property>
+				<Property Name="DestinationCount" Type="Int">2</Property>
+				<Property Name="Exe_iconItemID" Type="Ref">/My Computer/assets/controller_icon.ico</Property>
+				<Property Name="Source[0].itemID" Type="Str">{57CFDA8A-6762-426D-B8DA-CBAA02C42377}</Property>
+				<Property Name="Source[0].type" Type="Str">Container</Property>
+				<Property Name="Source[1].Container.applyInclusion" Type="Bool">true</Property>
+				<Property Name="Source[1].Container.depDestIndex" Type="Int">0</Property>
+				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Library_X64</Property>
+				<Property Name="Source[1].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[1].type" Type="Str">Container</Property>
+				<Property Name="Source[2].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[2].itemID" Type="Ref">/My Computer/startup.vi</Property>
+				<Property Name="Source[2].sourceInclusion" Type="Str">TopLevel</Property>
+				<Property Name="Source[2].type" Type="Str">VI</Property>
+				<Property Name="Source[3].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[3].itemID" Type="Ref">/My Computer/MAIN.vi</Property>
+				<Property Name="Source[3].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[3].type" Type="Str">VI</Property>
+				<Property Name="SourceCount" Type="Int">4</Property>
+				<Property Name="TgtF_companyName" Type="Str">Leeman Geophysical LLC</Property>
+				<Property Name="TgtF_fileDescription" Type="Str">C-Axis Controller</Property>
+				<Property Name="TgtF_internalName" Type="Str">C-Axis Controller</Property>
+				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2021 Leeman Geophysical</Property>
+				<Property Name="TgtF_productName" Type="Str">C-Axis Controller</Property>
+				<Property Name="TgtF_targetfileGUID" Type="Str">{83EF2566-8D33-4D8C-9E94-199491C4688F}</Property>
+				<Property Name="TgtF_targetfileName" Type="Str">caxiscontroller.exe</Property>
+				<Property Name="TgtF_versionIndependent" Type="Bool">true</Property>
+			</Item>
+			<Item Name="C-Axis Controller Installer" Type="Installer">
+				<Property Name="Destination[0].name" Type="Str">c-axis-controller</Property>
+				<Property Name="Destination[0].parent" Type="Str">{3912416A-D2E5-411B-AFEE-B63654D690C0}</Property>
+				<Property Name="Destination[0].tag" Type="Str">{CB5BE337-7014-4C21-86A9-8BF0AA26311D}</Property>
+				<Property Name="Destination[0].type" Type="Str">userFolder</Property>
+				<Property Name="DestinationCount" Type="Int">1</Property>
+				<Property Name="DistPart[0].flavorID" Type="Str">DefaultFull</Property>
+				<Property Name="DistPart[0].productID" Type="Str">{1D64A5FC-338A-4C3D-A3BD-8FC65A2B5D36}</Property>
+				<Property Name="DistPart[0].productName" Type="Str">NI Vision Common Resources 2019 SP1</Property>
+				<Property Name="DistPart[0].upgradeCode" Type="Str">{409BEFA9-EB3E-472F-AD77-271A4A1D5927}</Property>
+				<Property Name="DistPart[1].flavorID" Type="Str">DefaultFull</Property>
+				<Property Name="DistPart[1].productID" Type="Str">{BFF07050-00F5-4C45-94E7-2B61AD921B32}</Property>
+				<Property Name="DistPart[1].productName" Type="Str">NI Vision Runtime 2019</Property>
+				<Property Name="DistPart[1].upgradeCode" Type="Str">{63DF74E5-A5C9-11D4-814E-005004D6CDD6}</Property>
+				<Property Name="DistPart[2].flavorID" Type="Str">_full_</Property>
+				<Property Name="DistPart[2].productID" Type="Str">{160B311C-5360-4299-BD7C-1C61EB18036E}</Property>
+				<Property Name="DistPart[2].productName" Type="Str">NI-488.2 Runtime 19.0</Property>
+				<Property Name="DistPart[2].upgradeCode" Type="Str">{357F6618-C660-41A2-A185-5578CC876D1D}</Property>
+				<Property Name="DistPart[3].flavorID" Type="Str">_full_</Property>
+				<Property Name="DistPart[3].productID" Type="Str">{F12C6F92-5B1C-4EAB-9364-96026CE1920D}</Property>
+				<Property Name="DistPart[3].productName" Type="Str">NI-Serial Runtime 20.0</Property>
+				<Property Name="DistPart[3].upgradeCode" Type="Str">{01D82F43-B48D-46FF-8601-FC4FAAE20F41}</Property>
+				<Property Name="DistPart[4].flavorID" Type="Str">_deployment_</Property>
+				<Property Name="DistPart[4].productID" Type="Str">{944CC86F-BDFB-4850-878C-370B9A7FF12C}</Property>
+				<Property Name="DistPart[4].productName" Type="Str">NI-VISA Runtime 20.0</Property>
+				<Property Name="DistPart[4].upgradeCode" Type="Str">{8627993A-3F66-483C-A562-0D3BA3F267B1}</Property>
+				<Property Name="DistPart[5].flavorID" Type="Str">DefaultFull</Property>
+				<Property Name="DistPart[5].productID" Type="Str">{20C9E95B-0D53-4717-95D2-8B1275C5FE22}</Property>
+				<Property Name="DistPart[5].productName" Type="Str">NI LabVIEW Runtime 2019 SP1 (64-bit)</Property>
+				<Property Name="DistPart[5].SoftDep[0].exclude" Type="Bool">false</Property>
+				<Property Name="DistPart[5].SoftDep[0].productName" Type="Str">NI ActiveX Container (64-bit)</Property>
+				<Property Name="DistPart[5].SoftDep[0].upgradeCode" Type="Str">{1038A887-23E1-4289-B0BD-0C4B83C6BA21}</Property>
+				<Property Name="DistPart[5].SoftDep[1].exclude" Type="Bool">false</Property>
+				<Property Name="DistPart[5].SoftDep[1].productName" Type="Str">NI Deployment Framework 2019</Property>
+				<Property Name="DistPart[5].SoftDep[1].upgradeCode" Type="Str">{838942E4-B73C-492E-81A3-AA1E291FD0DC}</Property>
+				<Property Name="DistPart[5].SoftDep[10].exclude" Type="Bool">false</Property>
+				<Property Name="DistPart[5].SoftDep[10].productName" Type="Str">NI TDM Streaming 19.0</Property>
+				<Property Name="DistPart[5].SoftDep[10].upgradeCode" Type="Str">{4CD11BE6-6BB7-4082-8A27-C13771BC309B}</Property>
+				<Property Name="DistPart[5].SoftDep[2].exclude" Type="Bool">false</Property>
+				<Property Name="DistPart[5].SoftDep[2].productName" Type="Str">NI Error Reporting 2019 (64-bit)</Property>
+				<Property Name="DistPart[5].SoftDep[2].upgradeCode" Type="Str">{785BE224-E5B2-46A5-ADCB-55C949B5C9C7}</Property>
+				<Property Name="DistPart[5].SoftDep[3].exclude" Type="Bool">false</Property>
+				<Property Name="DistPart[5].SoftDep[3].productName" Type="Str">NI LabVIEW Real-Time NBFifo 2019</Property>
+				<Property Name="DistPart[5].SoftDep[3].upgradeCode" Type="Str">{8386B074-C90C-43A8-99F2-203BAAB4111C}</Property>
+				<Property Name="DistPart[5].SoftDep[4].exclude" Type="Bool">false</Property>
+				<Property Name="DistPart[5].SoftDep[4].productName" Type="Str">NI Logos 19.0</Property>
+				<Property Name="DistPart[5].SoftDep[4].upgradeCode" Type="Str">{5E4A4CE3-4D06-11D4-8B22-006008C16337}</Property>
+				<Property Name="DistPart[5].SoftDep[5].exclude" Type="Bool">false</Property>
+				<Property Name="DistPart[5].SoftDep[5].productName" Type="Str">NI LabVIEW Web Server 2019 (64-bit)</Property>
+				<Property Name="DistPart[5].SoftDep[5].upgradeCode" Type="Str">{5F449D4C-83B9-492E-986B-6B85A29C431D}</Property>
+				<Property Name="DistPart[5].SoftDep[6].exclude" Type="Bool">false</Property>
+				<Property Name="DistPart[5].SoftDep[6].productName" Type="Str">NI mDNS Responder 19.0</Property>
+				<Property Name="DistPart[5].SoftDep[6].upgradeCode" Type="Str">{9607874B-4BB3-42CB-B450-A2F5EF60BA3B}</Property>
+				<Property Name="DistPart[5].SoftDep[7].exclude" Type="Bool">false</Property>
+				<Property Name="DistPart[5].SoftDep[7].productName" Type="Str">Math Kernel Libraries 2017</Property>
+				<Property Name="DistPart[5].SoftDep[7].upgradeCode" Type="Str">{699C1AC5-2CF2-4745-9674-B19536EBA8A3}</Property>
+				<Property Name="DistPart[5].SoftDep[8].exclude" Type="Bool">false</Property>
+				<Property Name="DistPart[5].SoftDep[8].productName" Type="Str">Math Kernel Libraries 2018</Property>
+				<Property Name="DistPart[5].SoftDep[8].upgradeCode" Type="Str">{33A780B9-8BDE-4A3A-9672-24778EFBEFC4}</Property>
+				<Property Name="DistPart[5].SoftDep[9].exclude" Type="Bool">false</Property>
+				<Property Name="DistPart[5].SoftDep[9].productName" Type="Str">NI VC2015 Runtime</Property>
+				<Property Name="DistPart[5].SoftDep[9].upgradeCode" Type="Str">{D42E7BAE-6589-4570-B6A3-3E28889392E7}</Property>
+				<Property Name="DistPart[5].SoftDepCount" Type="Int">11</Property>
+				<Property Name="DistPart[5].upgradeCode" Type="Str">{0F4FB023-A713-40CF-AC56-843EEEB44133}</Property>
+				<Property Name="DistPartCount" Type="Int">6</Property>
+				<Property Name="INST_author" Type="Str">Leeman Geophysical</Property>
+				<Property Name="INST_autoIncrement" Type="Bool">true</Property>
+				<Property Name="INST_buildLocation" Type="Path">../builds/c-axis-controller/C-Axis Controller Installer</Property>
+				<Property Name="INST_buildLocation.type" Type="Str">relativeToCommon</Property>
+				<Property Name="INST_buildSpecName" Type="Str">C-Axis Controller Installer</Property>
+				<Property Name="INST_defaultDir" Type="Str">{CB5BE337-7014-4C21-86A9-8BF0AA26311D}</Property>
+				<Property Name="INST_installerName" Type="Str">install.exe</Property>
+				<Property Name="INST_productName" Type="Str">c-axis-controller</Property>
+				<Property Name="INST_productVersion" Type="Str">1.0.3</Property>
+				<Property Name="InstSpecBitness" Type="Str">64-bit</Property>
+				<Property Name="InstSpecVersion" Type="Str">19008009</Property>
+				<Property Name="MSI_arpCompany" Type="Str">Leeman Geophysical</Property>
+				<Property Name="MSI_arpPhone" Type="Str">479-373-3736</Property>
+				<Property Name="MSI_arpURL" Type="Str">www.leemangeophysical.com</Property>
+				<Property Name="MSI_autoselectDrivers" Type="Bool">true</Property>
+				<Property Name="MSI_distID" Type="Str">{4D3AE2BF-7F01-4C6F-AA56-EF055FE50868}</Property>
+				<Property Name="MSI_hideNonRuntimes" Type="Bool">true</Property>
+				<Property Name="MSI_osCheck" Type="Int">0</Property>
+				<Property Name="MSI_upgradeCode" Type="Str">{5A5933A8-6C68-48C2-A352-454035CBD1C7}</Property>
+				<Property Name="RegDest[0].dirName" Type="Str">Software</Property>
+				<Property Name="RegDest[0].dirTag" Type="Str">{DDFAFC8B-E728-4AC8-96DE-B920EBB97A86}</Property>
+				<Property Name="RegDest[0].parentTag" Type="Str">2</Property>
+				<Property Name="RegDestCount" Type="Int">1</Property>
+				<Property Name="Source[0].dest" Type="Str">{CB5BE337-7014-4C21-86A9-8BF0AA26311D}</Property>
+				<Property Name="Source[0].File[0].dest" Type="Str">{CB5BE337-7014-4C21-86A9-8BF0AA26311D}</Property>
+				<Property Name="Source[0].File[0].name" Type="Str">caxiscontroller.exe</Property>
+				<Property Name="Source[0].File[0].Shortcut[0].destIndex" Type="Int">0</Property>
+				<Property Name="Source[0].File[0].Shortcut[0].name" Type="Str">caxiscontroller</Property>
+				<Property Name="Source[0].File[0].Shortcut[0].subDir" Type="Str">c-axis-controller</Property>
+				<Property Name="Source[0].File[0].ShortcutCount" Type="Int">1</Property>
+				<Property Name="Source[0].File[0].tag" Type="Str">{83EF2566-8D33-4D8C-9E94-199491C4688F}</Property>
+				<Property Name="Source[0].FileCount" Type="Int">1</Property>
+				<Property Name="Source[0].name" Type="Str">C-Axis Controller</Property>
+				<Property Name="Source[0].tag" Type="Ref">/My Computer/Build Specifications/C-Axis Controller</Property>
+				<Property Name="Source[0].type" Type="Str">EXE</Property>
+				<Property Name="SourceCount" Type="Int">1</Property>
+			</Item>
+		</Item>
 	</Item>
 </Project>
