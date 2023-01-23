@@ -286,6 +286,7 @@
 			<Item Name="2D_Flip_UD.vi" Type="VI" URL="../2D_Flip_UD.vi"/>
 			<Item Name="roi_scratch_program.vi" Type="VI" URL="../roi_scratch_program.vi"/>
 			<Item Name="camera_multiple_image_test.vi" Type="VI" URL="../camera_multiple_image_test.vi"/>
+			<Item Name="copy_dlls.vi" Type="VI" URL="../copy_dlls.vi"/>
 		</Item>
 		<Item Name="typedefs" Type="Folder">
 			<Item Name="AcquireSampleImages_states_enum_typedef.ctl" Type="VI" URL="../AcquireSampleImages_states_enum_typedef.ctl"/>
@@ -461,21 +462,22 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{CDB0299C-033C-4B7D-B152-B72994235F26}</Property>
-				<Property Name="Bld_version.build" Type="Int">3</Property>
+				<Property Name="Bld_version.build" Type="Int">5</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">caxiscontroller.exe</Property>
 				<Property Name="Destination[0].path" Type="Path">../builds/NI_AB_PROJECTNAME/C-Axis Controller/caxiscontroller.exe</Property>
 				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
 				<Property Name="Destination[0].type" Type="Str">App</Property>
 				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
-				<Property Name="Destination[1].path" Type="Path">../builds/NI_AB_PROJECTNAME/C-Axis Controller/data</Property>
+				<Property Name="Destination[1].path" Type="Path">../builds/NI_AB_PROJECTNAME/C-Axis Controller/Library_X64</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
 				<Property Name="Exe_iconItemID" Type="Ref">/My Computer/assets/controller_icon.ico</Property>
-				<Property Name="Source[0].itemID" Type="Str">{57CFDA8A-6762-426D-B8DA-CBAA02C42377}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{1C8F9664-AF50-491E-A294-BB8601866978}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
+				<Property Name="Source[1].Container.applyDestination" Type="Bool">true</Property>
 				<Property Name="Source[1].Container.applyInclusion" Type="Bool">true</Property>
 				<Property Name="Source[1].Container.depDestIndex" Type="Int">0</Property>
-				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[1].destinationIndex" Type="Int">1</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Library_X64</Property>
 				<Property Name="Source[1].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[1].type" Type="Str">Container</Property>
@@ -561,7 +563,11 @@
 				<Property Name="DistPart[5].SoftDep[9].upgradeCode" Type="Str">{D42E7BAE-6589-4570-B6A3-3E28889392E7}</Property>
 				<Property Name="DistPart[5].SoftDepCount" Type="Int">11</Property>
 				<Property Name="DistPart[5].upgradeCode" Type="Str">{0F4FB023-A713-40CF-AC56-843EEEB44133}</Property>
-				<Property Name="DistPartCount" Type="Int">6</Property>
+				<Property Name="DistPart[6].flavorID" Type="Str">DefaultFull</Property>
+				<Property Name="DistPart[6].productID" Type="Str">{23A144B0-4BFD-44AF-9522-CAA3BE7EB434}</Property>
+				<Property Name="DistPart[6].productName" Type="Str">NI-IMAQ Runtime 19.5</Property>
+				<Property Name="DistPart[6].upgradeCode" Type="Str">{A1A903C1-6270-11D4-8133-005004D6CDD6}</Property>
+				<Property Name="DistPartCount" Type="Int">7</Property>
 				<Property Name="INST_author" Type="Str">Leeman Geophysical</Property>
 				<Property Name="INST_autoIncrement" Type="Bool">true</Property>
 				<Property Name="INST_buildLocation" Type="Path">../builds/c-axis-controller/C-Axis Controller Installer</Property>
@@ -570,13 +576,12 @@
 				<Property Name="INST_defaultDir" Type="Str">{CB5BE337-7014-4C21-86A9-8BF0AA26311D}</Property>
 				<Property Name="INST_installerName" Type="Str">install.exe</Property>
 				<Property Name="INST_productName" Type="Str">c-axis-controller</Property>
-				<Property Name="INST_productVersion" Type="Str">1.0.3</Property>
+				<Property Name="INST_productVersion" Type="Str">1.0.6</Property>
 				<Property Name="InstSpecBitness" Type="Str">64-bit</Property>
 				<Property Name="InstSpecVersion" Type="Str">19008009</Property>
 				<Property Name="MSI_arpCompany" Type="Str">Leeman Geophysical</Property>
 				<Property Name="MSI_arpPhone" Type="Str">479-373-3736</Property>
 				<Property Name="MSI_arpURL" Type="Str">www.leemangeophysical.com</Property>
-				<Property Name="MSI_autoselectDrivers" Type="Bool">true</Property>
 				<Property Name="MSI_distID" Type="Str">{4D3AE2BF-7F01-4C6F-AA56-EF055FE50868}</Property>
 				<Property Name="MSI_hideNonRuntimes" Type="Bool">true</Property>
 				<Property Name="MSI_osCheck" Type="Int">0</Property>

@@ -84,8 +84,10 @@
 				<Item Name="initial_guess.vi" Type="VI" URL="../initial_guess.vi"/>
 				<Item Name="intensity_function.vi" Type="VI" URL="../intensity_function.vi"/>
 				<Item Name="intensity_function_derivatives.vi" Type="VI" URL="../intensity_function_derivatives.vi"/>
+				<Item Name="is_roi_inside_roi.vi" Type="VI" URL="../is_roi_inside_roi.vi"/>
 				<Item Name="LM model function and gradient.vi" Type="VI" URL="../LM model function and gradient.vi"/>
 				<Item Name="LM_fit.vi" Type="VI" URL="../LM_fit.vi"/>
+				<Item Name="mask_off_ROIs.vi" Type="VI" URL="../mask_off_ROIs.vi"/>
 				<Item Name="read_mask_from_file.vi" Type="VI" URL="../read_mask_from_file.vi"/>
 				<Item Name="select_mask.vi" Type="VI" URL="../select_mask.vi"/>
 				<Item Name="setup_sections.vi" Type="VI" URL="../setup_sections.vi"/>
@@ -125,6 +127,8 @@
 			<Item Name="sample_parameter_cluster_typedef.ctl" Type="VI" URL="../sample_parameter_cluster_typedef.ctl"/>
 		</Item>
 		<Item Name="MAIN.vi" Type="VI" URL="../MAIN.vi"/>
+		<Item Name="mask_off_rois_states_enum_typedef.ctl" Type="VI" URL="../mask_off_rois_states_enum_typedef.ctl"/>
+		<Item Name="test_mapping_coordinates.vi" Type="VI" URL="../test_mapping_coordinates.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="BuildHelpPath.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/BuildHelpPath.vi"/>
@@ -154,6 +158,7 @@
 				<Item Name="IMAQ Cast Image 2" Type="VI" URL="/&lt;vilib&gt;/vision/Management.llb/IMAQ Cast Image 2"/>
 				<Item Name="IMAQ Create" Type="VI" URL="/&lt;vilib&gt;/vision/Basics.llb/IMAQ Create"/>
 				<Item Name="IMAQ GetImageSize" Type="VI" URL="/&lt;vilib&gt;/vision/Basics.llb/IMAQ GetImageSize"/>
+				<Item Name="IMAQ Group ROIs" Type="VI" URL="/&lt;vilib&gt;/vision/ROI Tools.llb/IMAQ Group ROIs"/>
 				<Item Name="IMAQ Image.ctl" Type="VI" URL="/&lt;vilib&gt;/vision/Image Controls.llb/IMAQ Image.ctl"/>
 				<Item Name="IMAQ ReadFile 2" Type="VI" URL="/&lt;vilib&gt;/vision/Files.llb/IMAQ ReadFile 2"/>
 				<Item Name="IMAQ Ungroup ROIs" Type="VI" URL="/&lt;vilib&gt;/vision/ROI Tools.llb/IMAQ Ungroup ROIs"/>
@@ -187,6 +192,138 @@
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
 		</Item>
-		<Item Name="Build Specifications" Type="Build"/>
+		<Item Name="Build Specifications" Type="Build">
+			<Item Name="C Axis Analysis Post Processing" Type="EXE">
+				<Property Name="App_copyErrors" Type="Bool">true</Property>
+				<Property Name="App_INI_aliasGUID" Type="Str">{1CD2ADC0-EA2D-4B8C-AD8F-2D89972BC65D}</Property>
+				<Property Name="App_INI_GUID" Type="Str">{EC559E50-6B89-4807-8B0A-E8F53750E9B4}</Property>
+				<Property Name="App_serverConfig.httpPort" Type="Int">8002</Property>
+				<Property Name="Bld_autoIncrement" Type="Bool">true</Property>
+				<Property Name="Bld_buildCacheID" Type="Str">{ED2C717A-A3CF-45FD-A08D-AACE94FFA362}</Property>
+				<Property Name="Bld_buildSpecName" Type="Str">C Axis Analysis Post Processing</Property>
+				<Property Name="Bld_excludeInlineSubVIs" Type="Bool">true</Property>
+				<Property Name="Bld_excludeLibraryItems" Type="Bool">true</Property>
+				<Property Name="Bld_excludePolymorphicVIs" Type="Bool">true</Property>
+				<Property Name="Bld_localDestDir" Type="Path">../builds/NI_AB_PROJECTNAME/C Axis Analysis Post Processing</Property>
+				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
+				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
+				<Property Name="Bld_previewCacheID" Type="Str">{987E0EFC-3382-4B0D-831C-A0F1337333EC}</Property>
+				<Property Name="Bld_version.build" Type="Int">1</Property>
+				<Property Name="Bld_version.major" Type="Int">1</Property>
+				<Property Name="Destination[0].destName" Type="Str">caxispost.exe</Property>
+				<Property Name="Destination[0].path" Type="Path">../builds/NI_AB_PROJECTNAME/C Axis Analysis Post Processing/caxispost.exe</Property>
+				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
+				<Property Name="Destination[0].type" Type="Str">App</Property>
+				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
+				<Property Name="Destination[1].path" Type="Path">../builds/NI_AB_PROJECTNAME/C Axis Analysis Post Processing/data</Property>
+				<Property Name="DestinationCount" Type="Int">2</Property>
+				<Property Name="Source[0].itemID" Type="Str">{1B44A469-6591-4579-8752-A91F757AB85B}</Property>
+				<Property Name="Source[0].type" Type="Str">Container</Property>
+				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[1].itemID" Type="Ref">/My Computer/MAIN.vi</Property>
+				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
+				<Property Name="Source[1].type" Type="Str">VI</Property>
+				<Property Name="SourceCount" Type="Int">2</Property>
+				<Property Name="TgtF_companyName" Type="Str">Leeman Geophysical</Property>
+				<Property Name="TgtF_fileDescription" Type="Str">C Axis Analysis Post Processing</Property>
+				<Property Name="TgtF_internalName" Type="Str">C Axis Analysis Post Processing</Property>
+				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2021 Leeman Geophysical</Property>
+				<Property Name="TgtF_productName" Type="Str">C Axis Analysis Post Processing</Property>
+				<Property Name="TgtF_targetfileGUID" Type="Str">{9BDEBCD2-0071-4822-BEBD-749F76E67620}</Property>
+				<Property Name="TgtF_targetfileName" Type="Str">caxispost.exe</Property>
+				<Property Name="TgtF_versionIndependent" Type="Bool">true</Property>
+			</Item>
+			<Item Name="CAxis Analyzer Post Processor Installer" Type="Installer">
+				<Property Name="Destination[0].name" Type="Str">c-axis-analysis</Property>
+				<Property Name="Destination[0].parent" Type="Str">{3912416A-D2E5-411B-AFEE-B63654D690C0}</Property>
+				<Property Name="Destination[0].tag" Type="Str">{464E0945-6F40-4244-A326-806BCAF7F963}</Property>
+				<Property Name="Destination[0].type" Type="Str">userFolder</Property>
+				<Property Name="DestinationCount" Type="Int">1</Property>
+				<Property Name="DistPart[0].flavorID" Type="Str">DefaultFull</Property>
+				<Property Name="DistPart[0].productID" Type="Str">{1D64A5FC-338A-4C3D-A3BD-8FC65A2B5D36}</Property>
+				<Property Name="DistPart[0].productName" Type="Str">NI Vision Common Resources 2019 SP1</Property>
+				<Property Name="DistPart[0].upgradeCode" Type="Str">{409BEFA9-EB3E-472F-AD77-271A4A1D5927}</Property>
+				<Property Name="DistPart[1].flavorID" Type="Str">DefaultFull</Property>
+				<Property Name="DistPart[1].productID" Type="Str">{BFF07050-00F5-4C45-94E7-2B61AD921B32}</Property>
+				<Property Name="DistPart[1].productName" Type="Str">NI Vision Runtime 2019</Property>
+				<Property Name="DistPart[1].upgradeCode" Type="Str">{63DF74E5-A5C9-11D4-814E-005004D6CDD6}</Property>
+				<Property Name="DistPart[2].flavorID" Type="Str">DefaultFull</Property>
+				<Property Name="DistPart[2].productID" Type="Str">{1E3C5D81-5D10-421A-AE16-1FC585D2FB7D}</Property>
+				<Property Name="DistPart[2].productName" Type="Str">NI LabVIEW Runtime 2019 SP1 f3</Property>
+				<Property Name="DistPart[2].SoftDep[0].exclude" Type="Bool">false</Property>
+				<Property Name="DistPart[2].SoftDep[0].productName" Type="Str">NI ActiveX Container</Property>
+				<Property Name="DistPart[2].SoftDep[0].upgradeCode" Type="Str">{1038A887-23E1-4289-B0BD-0C4B83C6BA21}</Property>
+				<Property Name="DistPart[2].SoftDep[1].exclude" Type="Bool">false</Property>
+				<Property Name="DistPart[2].SoftDep[1].productName" Type="Str">NI Deployment Framework 2019</Property>
+				<Property Name="DistPart[2].SoftDep[1].upgradeCode" Type="Str">{838942E4-B73C-492E-81A3-AA1E291FD0DC}</Property>
+				<Property Name="DistPart[2].SoftDep[10].exclude" Type="Bool">false</Property>
+				<Property Name="DistPart[2].SoftDep[10].productName" Type="Str">NI VC2015 Runtime</Property>
+				<Property Name="DistPart[2].SoftDep[10].upgradeCode" Type="Str">{D42E7BAE-6589-4570-B6A3-3E28889392E7}</Property>
+				<Property Name="DistPart[2].SoftDep[11].exclude" Type="Bool">false</Property>
+				<Property Name="DistPart[2].SoftDep[11].productName" Type="Str">NI TDM Streaming 19.0</Property>
+				<Property Name="DistPart[2].SoftDep[11].upgradeCode" Type="Str">{4CD11BE6-6BB7-4082-8A27-C13771BC309B}</Property>
+				<Property Name="DistPart[2].SoftDep[2].exclude" Type="Bool">false</Property>
+				<Property Name="DistPart[2].SoftDep[2].productName" Type="Str">NI Error Reporting 2019</Property>
+				<Property Name="DistPart[2].SoftDep[2].upgradeCode" Type="Str">{42E818C6-2B08-4DE7-BD91-B0FD704C119A}</Property>
+				<Property Name="DistPart[2].SoftDep[3].exclude" Type="Bool">false</Property>
+				<Property Name="DistPart[2].SoftDep[3].productName" Type="Str">NI LabVIEW Real-Time NBFifo 2019</Property>
+				<Property Name="DistPart[2].SoftDep[3].upgradeCode" Type="Str">{8386B074-C90C-43A8-99F2-203BAAB4111C}</Property>
+				<Property Name="DistPart[2].SoftDep[4].exclude" Type="Bool">false</Property>
+				<Property Name="DistPart[2].SoftDep[4].productName" Type="Str">NI LabVIEW Runtime 2019 SP1 Non-English Support.</Property>
+				<Property Name="DistPart[2].SoftDep[4].upgradeCode" Type="Str">{446D49A5-F830-4ADF-8C78-F03284D6882D}</Property>
+				<Property Name="DistPart[2].SoftDep[5].exclude" Type="Bool">false</Property>
+				<Property Name="DistPart[2].SoftDep[5].productName" Type="Str">NI Logos 19.0</Property>
+				<Property Name="DistPart[2].SoftDep[5].upgradeCode" Type="Str">{5E4A4CE3-4D06-11D4-8B22-006008C16337}</Property>
+				<Property Name="DistPart[2].SoftDep[6].exclude" Type="Bool">false</Property>
+				<Property Name="DistPart[2].SoftDep[6].productName" Type="Str">NI LabVIEW Web Server 2019</Property>
+				<Property Name="DistPart[2].SoftDep[6].upgradeCode" Type="Str">{0960380B-EA86-4E0C-8B57-14CD8CCF2C15}</Property>
+				<Property Name="DistPart[2].SoftDep[7].exclude" Type="Bool">false</Property>
+				<Property Name="DistPart[2].SoftDep[7].productName" Type="Str">NI mDNS Responder 19.0</Property>
+				<Property Name="DistPart[2].SoftDep[7].upgradeCode" Type="Str">{9607874B-4BB3-42CB-B450-A2F5EF60BA3B}</Property>
+				<Property Name="DistPart[2].SoftDep[8].exclude" Type="Bool">false</Property>
+				<Property Name="DistPart[2].SoftDep[8].productName" Type="Str">Math Kernel Libraries 2017</Property>
+				<Property Name="DistPart[2].SoftDep[8].upgradeCode" Type="Str">{699C1AC5-2CF2-4745-9674-B19536EBA8A3}</Property>
+				<Property Name="DistPart[2].SoftDep[9].exclude" Type="Bool">false</Property>
+				<Property Name="DistPart[2].SoftDep[9].productName" Type="Str">Math Kernel Libraries 2018</Property>
+				<Property Name="DistPart[2].SoftDep[9].upgradeCode" Type="Str">{33A780B9-8BDE-4A3A-9672-24778EFBEFC4}</Property>
+				<Property Name="DistPart[2].SoftDepCount" Type="Int">12</Property>
+				<Property Name="DistPart[2].upgradeCode" Type="Str">{7D6295E5-8FB8-4BCE-B1CD-B5B396FA1D3F}</Property>
+				<Property Name="DistPartCount" Type="Int">3</Property>
+				<Property Name="INST_author" Type="Str">Leeman Geophysical</Property>
+				<Property Name="INST_autoIncrement" Type="Bool">true</Property>
+				<Property Name="INST_buildLocation" Type="Path">../builds/c-axis-analysis/CAxis Analyzer Post Processor Installer</Property>
+				<Property Name="INST_buildLocation.type" Type="Str">relativeToCommon</Property>
+				<Property Name="INST_buildSpecName" Type="Str">CAxis Analyzer Post Processor Installer</Property>
+				<Property Name="INST_defaultDir" Type="Str">{464E0945-6F40-4244-A326-806BCAF7F963}</Property>
+				<Property Name="INST_installerName" Type="Str">install.exe</Property>
+				<Property Name="INST_productName" Type="Str">c-axis-analysis</Property>
+				<Property Name="INST_productVersion" Type="Str">1.0.1</Property>
+				<Property Name="InstSpecBitness" Type="Str">32-bit</Property>
+				<Property Name="InstSpecVersion" Type="Str">19008009</Property>
+				<Property Name="MSI_arpCompany" Type="Str">Leeman Geophysical</Property>
+				<Property Name="MSI_autoselectDrivers" Type="Bool">true</Property>
+				<Property Name="MSI_distID" Type="Str">{B9521A0D-6068-4171-9D09-D1E87A919445}</Property>
+				<Property Name="MSI_hideNonRuntimes" Type="Bool">true</Property>
+				<Property Name="MSI_osCheck" Type="Int">0</Property>
+				<Property Name="MSI_upgradeCode" Type="Str">{C029DFF5-82B3-44E5-BD1F-D62BC5A6EF1C}</Property>
+				<Property Name="RegDest[0].dirName" Type="Str">Software</Property>
+				<Property Name="RegDest[0].dirTag" Type="Str">{DDFAFC8B-E728-4AC8-96DE-B920EBB97A86}</Property>
+				<Property Name="RegDest[0].parentTag" Type="Str">2</Property>
+				<Property Name="RegDestCount" Type="Int">1</Property>
+				<Property Name="Source[0].dest" Type="Str">{464E0945-6F40-4244-A326-806BCAF7F963}</Property>
+				<Property Name="Source[0].File[0].dest" Type="Str">{464E0945-6F40-4244-A326-806BCAF7F963}</Property>
+				<Property Name="Source[0].File[0].name" Type="Str">caxispost.exe</Property>
+				<Property Name="Source[0].File[0].Shortcut[0].destIndex" Type="Int">0</Property>
+				<Property Name="Source[0].File[0].Shortcut[0].name" Type="Str">caxispost</Property>
+				<Property Name="Source[0].File[0].Shortcut[0].subDir" Type="Str">c-axis-analysis</Property>
+				<Property Name="Source[0].File[0].ShortcutCount" Type="Int">1</Property>
+				<Property Name="Source[0].File[0].tag" Type="Str">{9BDEBCD2-0071-4822-BEBD-749F76E67620}</Property>
+				<Property Name="Source[0].FileCount" Type="Int">1</Property>
+				<Property Name="Source[0].name" Type="Str">C Axis Analysis Post Processing</Property>
+				<Property Name="Source[0].tag" Type="Ref">/My Computer/Build Specifications/C Axis Analysis Post Processing</Property>
+				<Property Name="Source[0].type" Type="Str">EXE</Property>
+				<Property Name="SourceCount" Type="Int">1</Property>
+			</Item>
+		</Item>
 	</Item>
 </Project>
